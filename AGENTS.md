@@ -1,7 +1,7 @@
 # ExMonitorViewerMac
 
 - This is the independent macOS application, not the Windows ExMonitorViewer repository.
-- Target macOS 14+, arm64; use Apple frameworks without third-party dependencies.
+- Target macOS 26+, arm64; validation baseline is macOS 26.6.2; use Apple frameworks without third-party dependencies.
 - Keep UI and runtime logs in English. Japanese documentation and comments are welcome.
 - Never log captured content, window titles, or meeting details. Never write captured frames to disk.
 - Keep capture, GPU rendering, window UI, and persistence separate. Retain at most the latest pending frame.
