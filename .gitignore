@@ -1,0 +1,11 @@
+.DS_Store
+
+# Xcode user state and generated build products
+build/
+dist/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside

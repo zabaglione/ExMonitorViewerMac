@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2000000000000000000000A /* LatestFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001B; };
+		A2000000000000000000000B /* LatestFrame.swift in Tests Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001B; };
+		A20000000000000000000001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* AppDelegate.swift */; };
+		A20000000000000000000002 /* CaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* CaptureController.swift */; };
+		A20000000000000000000003 /* MetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000013 /* MetalRenderer.swift */; };
+		A20000000000000000000004 /* Shaders.metal in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000014 /* Shaders.metal */; };
+		A20000000000000000000005 /* ViewGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* ViewGeometry.swift */; };
+		A20000000000000000000006 /* ViewerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016 /* ViewerSettings.swift */; };
+		A20000000000000000000007 /* GeometryAndSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000017 /* GeometryAndSettingsTests.swift */; };
+		A20000000000000000000008 /* ViewGeometry.swift in Tests Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* ViewGeometry.swift */; };
+		A20000000000000000000009 /* ViewerSettings.swift in Tests Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016 /* ViewerSettings.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2000000000000000000001B /* LatestFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestFrame.swift; sourceTree = "<group>"; };
+		A20000000000000000000011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A20000000000000000000012 /* CaptureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureController.swift; sourceTree = "<group>"; };
+		A20000000000000000000013 /* MetalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalRenderer.swift; sourceTree = "<group>"; };
+		A20000000000000000000014 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = text; path = Shaders.metal; sourceTree = "<group>"; };
+		A20000000000000000000015 /* ViewGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewGeometry.swift; sourceTree = "<group>"; };
+		A20000000000000000000016 /* ViewerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerSettings.swift; sourceTree = "<group>"; };
+		A20000000000000000000017 /* GeometryAndSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryAndSettingsTests.swift; sourceTree = "<group>"; };
+		A20000000000000000000018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000000000000000000019 /* ExMonitorViewerMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExMonitorViewerMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000000000000000000001A /* ExMonitorViewerMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExMonitorViewerMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A20000000000000000000061 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A20000000000000000000062 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A20000000000000000000071 = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000072 /* ExMonitorViewerMac sources */,
+				A20000000000000000000073 /* ExMonitorViewerMac tests */,
+				A20000000000000000000074 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A20000000000000000000072 /* ExMonitorViewerMac sources */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000011 /* AppDelegate.swift */,
+				A20000000000000000000012 /* CaptureController.swift */,
+				A20000000000000000000013 /* MetalRenderer.swift */,
+				A2000000000000000000001B /* LatestFrame.swift */,
+				A20000000000000000000014 /* Shaders.metal */,
+				A20000000000000000000015 /* ViewGeometry.swift */,
+				A20000000000000000000016 /* ViewerSettings.swift */,
+				A20000000000000000000018 /* Info.plist */,
+			);
+			path = Sources/ExMonitorViewerMac;
+			sourceTree = "<group>";
+		};
+		A20000000000000000000073 /* ExMonitorViewerMac tests */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000017 /* GeometryAndSettingsTests.swift */,
+			);
+			path = Tests/ExMonitorViewerMacTests;
+			sourceTree = "<group>";
+		};
+		A20000000000000000000074 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000019 /* ExMonitorViewerMac.app */,
+				A2000000000000000000001A /* ExMonitorViewerMacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A20000000000000000000051 /* ExMonitorViewerMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A20000000000000000000081 /* Build configuration list for PBXNativeTarget "ExMonitorViewerMac" */;
+			buildPhases = (
+				A20000000000000000000091 /* Sources */,
+				A20000000000000000000061 /* Frameworks */,
+				A20000000000000000000092 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExMonitorViewerMac;
+			productName = ExMonitorViewerMac;
+			productReference = A20000000000000000000019 /* ExMonitorViewerMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A20000000000000000000052 /* ExMonitorViewerMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A20000000000000000000082 /* Build configuration list for PBXNativeTarget "ExMonitorViewerMacTests" */;
+			buildPhases = (
+				A20000000000000000000093 /* Sources */,
+				A20000000000000000000062 /* Frameworks */,
+				A20000000000000000000094 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExMonitorViewerMacTests;
+			productName = ExMonitorViewerMacTests;
+			productReference = A2000000000000000000001A /* ExMonitorViewerMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A20000000000000000000031 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					A20000000000000000000051 = {CreatedOnToolsVersion = 26.6; };
+					A20000000000000000000052 = {CreatedOnToolsVersion = 26.6; };
+				};
+			};
+			buildConfigurationList = A20000000000000000000083 /* Build configuration list for PBXProject "ExMonitorViewerMac" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A20000000000000000000071;
+			productRefGroup = A20000000000000000000074 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A20000000000000000000051 /* ExMonitorViewerMac */,
+				A20000000000000000000052 /* ExMonitorViewerMacTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A20000000000000000000092 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A20000000000000000000004 /* Shaders.metal in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A20000000000000000000094 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A20000000000000000000091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A20000000000000000000001 /* AppDelegate.swift in Sources */,
+				A20000000000000000000002 /* CaptureController.swift in Sources */,
+				A20000000000000000000003 /* MetalRenderer.swift in Sources */,
+				A2000000000000000000000A /* LatestFrame.swift in Sources */,
+				A20000000000000000000005 /* ViewGeometry.swift in Sources */,
+				A20000000000000000000006 /* ViewerSettings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A20000000000000000000093 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A20000000000000000000007 /* GeometryAndSettingsTests.swift in Sources */,
+				A20000000000000000000008 /* ViewGeometry.swift in Tests Sources */,
+				A20000000000000000000009 /* ViewerSettings.swift in Tests Sources */,
+				A2000000000000000000000B /* LatestFrame.swift in Tests Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A200000000000000000000A1 /* Debug app */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/ExMonitorViewerMac/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zabaglione.ExMonitorViewerMac;
+				PRODUCT_NAME = ExMonitorViewerMac;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A200000000000000000000A2 /* Release app */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/ExMonitorViewerMac/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zabaglione.ExMonitorViewerMac;
+				PRODUCT_NAME = ExMonitorViewerMac;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A200000000000000000000A3 /* Debug tests */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zabaglione.ExMonitorViewerMacTests;
+				PRODUCT_NAME = ExMonitorViewerMacTests;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "";
+			};
+			name = Debug;
+		};
+		A200000000000000000000A4 /* Release tests */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zabaglione.ExMonitorViewerMacTests;
+				PRODUCT_NAME = ExMonitorViewerMacTests;
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "";
+			};
+			name = Release;
+		};
+		A200000000000000000000A5 /* Debug project */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A200000000000000000000A6 /* Release project */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A20000000000000000000081 /* Build configuration list for PBXNativeTarget "ExMonitorViewerMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A200000000000000000000A1 /* Debug app */,
+				A200000000000000000000A2 /* Release app */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A20000000000000000000082 /* Build configuration list for PBXNativeTarget "ExMonitorViewerMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A200000000000000000000A3 /* Debug tests */,
+				A200000000000000000000A4 /* Release tests */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A20000000000000000000083 /* Build configuration list for PBXProject "ExMonitorViewerMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A200000000000000000000A5 /* Debug project */,
+				A200000000000000000000A6 /* Release project */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A20000000000000000000031 /* Project object */;
+}
