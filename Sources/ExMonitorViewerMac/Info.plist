@@ -4,10 +4,20 @@
 <key>CFBundleExecutable</key><string>$(EXECUTABLE_NAME)</string>
 <key>CFBundleIdentifier</key><string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 <key>CFBundleName</key><string>ExMonitorViewerMac</string>
+<key>CFBundleIconFile</key><string>AppIcon.icns</string>
 <key>CFBundlePackageType</key><string>APPL</string>
-<key>CFBundleShortVersionString</key><string>0.1.0</string>
-<key>CFBundleVersion</key><string>1</string>
+<key>CFBundleShortVersionString</key><string>$(MARKETING_VERSION)</string>
+<key>CFBundleVersion</key><string>$(CURRENT_PROJECT_VERSION)</string>
 <key>LSMinimumSystemVersion</key><string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 <key>NSHighResolutionCapable</key><true/>
 <key>NSScreenCaptureUsageDescription</key><string>Display another screen in a local viewer window. No video or audio is recorded.</string>
+<key>CFBundleDevelopmentRegion</key><string>en</string>
+<key>CFBundleLocalizations</key><array><string>en</string></array>
+<key>CFBundleAllowMixedLocalizations</key><false/>
+<key>SUFeedURL</key><string>https://raw.githubusercontent.com/zabaglione/ExMonitorViewerMac/main/appcast.xml</string>
+<key>SUPublicEDKey</key><string>/4Nt5v4Dj5PXQ69oTXLGy8Isfi++4XXqqNz9P+7m+UQ=</string>
+<key>SURequireSignedFeed</key><true/>
+<key>SUAllowsAutomaticUpdates</key><false/>
+<key>SUAutomaticallyUpdate</key><false/>
+<key>SUVerifyUpdateBeforeExtraction</key><true/>
 </dict></plist>

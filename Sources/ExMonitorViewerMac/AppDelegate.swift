@@ -7,6 +7,7 @@ import CoreGraphics
 final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     private let capture = CaptureController()
     private let store = SettingsStore()
+    private let updates = AppUpdateController()
     private var settings = ViewerSettings()
     private var window: NSWindow!
     private var metalView: MTKView!
@@ -39,6 +40,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 
     static func main() {
         let app = NSApplication.shared
+        if let url = Bundle.main.url(forResource: "AppIcon", withExtension: "icns"),
+           let icon = NSImage(contentsOf: url) {
+            app.applicationIconImage = icon
+        }
         let delegate = AppDelegate()
         app.delegate = delegate
         app.setActivationPolicy(.regular)
@@ -57,6 +62,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         window.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
         if renderer != nil { restartCapture() }
+        updates.start()
     }
 
     @discardableResult
@@ -78,6 +84,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         let root = NSMenu()
         let app = submenu("ExMonitorViewerMac", parent: root)
         item("About ExMonitorViewerMac", action: #selector(showAbout), menu: app)
+        item("Third-Party Licenses", action: #selector(showLicenses), menu: app)
+        updates.addMenuItems(to: app)
         app.addItem(.separator())
         item("Quit ExMonitorViewerMac", action: #selector(quit), key: "q", menu: app)
         displayMenu = submenu("Display", parent: root)
@@ -189,6 +197,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 
     private func restartCapture() {
         guard renderer != nil, !terminating else { return }
+        #if UPDATER_TESTING
+        if Bundle.main.bundleIdentifier?.hasSuffix(".UpdateTest") == true {
+            setStatus("Update installer test mode.", running: false)
+            return
+        }
+        #endif
         captureTask?.cancel()
         captureConfiguration = configuration(for: selectedDisplay)
         guard let selectedDisplay else {
@@ -273,6 +287,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         }
     }
     @objc private func showAbout() { NSApp.orderFrontStandardAboutPanel(nil) }
+    @objc private func showLicenses() {
+        if let url = Bundle.main.url(forResource: "Sparkle-LICENSE", withExtension: "txt") {
+            NSWorkspace.shared.open(url)
+        }
+    }
     @objc private func quit() { NSApp.terminate(nil) }
 
     func windowWillEnterFullScreen(_ notification: Notification) {

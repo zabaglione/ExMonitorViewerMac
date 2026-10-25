@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+        A200000000000000000000D2 /* Sparkle-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = A200000000000000000000D3; };
+        A2000000000000000000000E /* AppUpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001D; };
+        A2000000000000000000000F /* UpdateConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001E; };
+        A200000000000000000000D1 /* UpdateConfiguration.swift in Tests */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001E; };
+		A2000000000000000000000D /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = A200000000000000000000C2 /* Sparkle */; };
+		A2000000000000000000000C /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001C; };
 		A2000000000000000000000A /* LatestFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001B; };
 		A2000000000000000000000B /* LatestFrame.swift in Tests Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001B; };
 		A20000000000000000000001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* AppDelegate.swift */; };
@@ -21,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+        A200000000000000000000D3 /* Sparkle-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Sparkle-LICENSE.txt"; sourceTree = "<group>"; };
+        A2000000000000000000001D /* AppUpdateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdateController.swift; sourceTree = "<group>"; };
+        A2000000000000000000001E /* UpdateConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateConfiguration.swift; sourceTree = "<group>"; };
+		A2000000000000000000001C /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		A2000000000000000000001B /* LatestFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestFrame.swift; sourceTree = "<group>"; };
 		A20000000000000000000011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A20000000000000000000012 /* CaptureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureController.swift; sourceTree = "<group>"; };
@@ -39,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2000000000000000000000D /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,11 +63,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A20000000000000000000075 /* Resources */ = {isa = PBXGroup; children = (A2000000000000000000001C /* AppIcon.icns */, A200000000000000000000D3 /* Sparkle-LICENSE.txt */,); path = Resources; sourceTree = "<group>"; };
 		A20000000000000000000071 = {
 			isa = PBXGroup;
 			children = (
 				A20000000000000000000072 /* ExMonitorViewerMac sources */,
 				A20000000000000000000073 /* ExMonitorViewerMac tests */,
+				A20000000000000000000075 /* Resources */,
 				A20000000000000000000074 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				A20000000000000000000011 /* AppDelegate.swift */,
+				A2000000000000000000001D /* AppUpdateController.swift */,
+				A2000000000000000000001E /* UpdateConfiguration.swift */,
 				A20000000000000000000012 /* CaptureController.swift */,
 				A20000000000000000000013 /* MetalRenderer.swift */,
 				A2000000000000000000001B /* LatestFrame.swift */,
@@ -109,6 +124,7 @@
 			dependencies = (
 			);
 			name = ExMonitorViewerMac;
+			packageProductDependencies = (A200000000000000000000C2 /* Sparkle */,);
 			productName = ExMonitorViewerMac;
 			productReference = A20000000000000000000019 /* ExMonitorViewerMac.app */;
 			productType = "com.apple.product-type.application";
@@ -154,6 +170,7 @@
 			);
 			mainGroup = A20000000000000000000071;
 			productRefGroup = A20000000000000000000074 /* Products */;
+			packageReferences = (A200000000000000000000C1 /* Sparkle */,);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -169,6 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A20000000000000000000004 /* Shaders.metal in Resources */,
+				A2000000000000000000000C /* AppIcon.icns in Resources */,
+                A200000000000000000000D2 /* Sparkle-LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +206,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A20000000000000000000001 /* AppDelegate.swift in Sources */,
+				A2000000000000000000000E /* AppUpdateController.swift in Sources */,
+				A2000000000000000000000F /* UpdateConfiguration.swift in Sources */,
 				A20000000000000000000002 /* CaptureController.swift in Sources */,
 				A20000000000000000000003 /* MetalRenderer.swift in Sources */,
 				A2000000000000000000000A /* LatestFrame.swift in Sources */,
@@ -200,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A20000000000000000000007 /* GeometryAndSettingsTests.swift in Sources */,
+				A200000000000000000000D1 /* UpdateConfiguration.swift in Tests */,
 				A20000000000000000000008 /* ViewGeometry.swift in Tests Sources */,
 				A20000000000000000000009 /* ViewerSettings.swift in Tests Sources */,
 				A2000000000000000000000B /* LatestFrame.swift in Tests Sources */,
@@ -216,13 +238,16 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = NO;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Sources/ExMonitorViewerMac/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zabaglione.ExMonitorViewerMac;
 				PRODUCT_NAME = ExMonitorViewerMac;
+				MARKETING_VERSION = 0.1.0;
+				CURRENT_PROJECT_VERSION = 1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -236,6 +261,14 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CLANG_ENABLE_CODE_COVERAGE = NO;
+				ENABLE_TESTABILITY = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				GCC_OPTIMIZATION_LEVEL = s;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -244,6 +277,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zabaglione.ExMonitorViewerMac;
 				PRODUCT_NAME = ExMonitorViewerMac;
+				MARKETING_VERSION = 0.1.0;
+				CURRENT_PROJECT_VERSION = 1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -323,6 +359,21 @@
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+        A200000000000000000000C1 /* Sparkle */ = {
+            isa = XCRemoteSwiftPackageReference;
+            repositoryURL = "https://github.com/sparkle-project/Sparkle";
+            requirement = {kind = exactVersion; version = 2.10.0; };
+        };
+/* End XCRemoteSwiftPackageReference section */
+/* Begin XCSwiftPackageProductDependency section */
+        A200000000000000000000C2 /* Sparkle */ = {
+            isa = XCSwiftPackageProductDependency;
+            package = A200000000000000000000C1;
+            productName = Sparkle;
+        };
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCConfigurationList section */
 		A20000000000000000000081 /* Build configuration list for PBXNativeTarget "ExMonitorViewerMac" */ = {

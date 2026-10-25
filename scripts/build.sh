@@ -4,9 +4,13 @@ set -euo pipefail
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd -- "$SCRIPT_DIR/.." && pwd)"
 DERIVED_DATA_DIR="$ROOT_DIR/build/DerivedData"
-APP_PATH="$DERIVED_DATA_DIR/Build/Products/Release/ExMonitorViewerMac.app"
 DIST_APP_PATH="$ROOT_DIR/dist/ExMonitorViewerMac.app"
 SIGNING_IDENTITY="${EXMONITOR_SIGN_IDENTITY:--}"
+CONFIGURATION=Release
+if [[ "$SIGNING_IDENTITY" == "-" ]]; then
+  CONFIGURATION=Debug
+fi
+APP_PATH="$DERIVED_DATA_DIR/Build/Products/$CONFIGURATION/ExMonitorViewerMac.app"
 
 ensure_app_stopped() {
   PROCESS_STATUS=0
@@ -25,9 +29,10 @@ ensure_app_stopped
 xcodebuild \
   -project "$ROOT_DIR/ExMonitorViewerMac.xcodeproj" \
   -scheme ExMonitorViewerMac \
-  -configuration Release \
+  -configuration "$CONFIGURATION" \
   -destination 'generic/platform=macOS' \
   -derivedDataPath "$DERIVED_DATA_DIR" \
+  -clonedSourcePackagesDirPath "$ROOT_DIR/build/SourcePackages" \
   ARCHS=arm64 \
   ONLY_ACTIVE_ARCH=NO \
   CODE_SIGN_IDENTITY="$SIGNING_IDENTITY" \

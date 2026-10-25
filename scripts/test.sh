@@ -15,6 +15,7 @@ xcodebuild \
   -configuration Debug \
   -destination 'platform=macOS,arch=arm64' \
   -derivedDataPath "$ROOT_DIR/build/TestDerivedData" \
+  -clonedSourcePackagesDirPath "$ROOT_DIR/build/SourcePackages" \
   ARCHS=arm64 \
   CODE_SIGN_IDENTITY=- \
   DEVELOPMENT_TEAM= \

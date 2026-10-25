@@ -3,6 +3,29 @@ import Foundation
 import XCTest
 import CoreVideo
 
+final class UpdateConfigurationTests: XCTestCase {
+    private let key = Data(repeating: 1, count: 32).base64EncodedString()
+
+    func testHTTPSFeedAndEd25519PublicKeyAreAccepted() throws {
+        let config = try UpdateConfiguration(feed: "https://example.com/appcast.xml", publicKey: key)
+        XCTAssertEqual(config.feedURL.scheme, "https")
+    }
+
+    func testUnsafeFeedURLsAreRejected() {
+        for feed in [nil, "", "http://example.com/appcast.xml", "http://127.0.0.1/appcast.xml",
+                     "file:///tmp/appcast.xml", "https://user:password@example.com/feed", "https://example.com/feed#fragment"] {
+            XCTAssertThrowsError(try UpdateConfiguration(feed: feed, publicKey: key))
+        }
+    }
+
+    func testMissingMalformedOrWrongLengthKeysAreRejected() {
+        for value in [nil, "", "not base64", Data(repeating: 1, count: 31).base64EncodedString(),
+                      Data(repeating: 1, count: 33).base64EncodedString()] {
+            XCTAssertThrowsError(try UpdateConfiguration(feed: "https://example.com/feed", publicKey: value))
+        }
+    }
+}
+
 final class ViewGeometryTests: XCTestCase {
     func testAspectFitPreservesAspectRatioAndCentersImage() {
         let source = CGSize(width: 1920, height: 1080)
